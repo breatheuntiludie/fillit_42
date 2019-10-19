@@ -6,7 +6,7 @@
 /*   By: ggeri <ggeri@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/19 16:03:37 by ggeri             #+#    #+#             */
-/*   Updated: 2019/10/19 20:23:18 by ggeri            ###   ########.fr       */
+/*   Updated: 2019/10/19 21:23:23 by ggeri            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -98,7 +98,6 @@ char	**make2darray(char *buff, int *count)
 	int		j;
 	int		k;
 
-//	printf("Buffer:\n%s", buff);
 	newarray = (char**)ft_memalloc(27 * sizeof(*newarray));
 	i = 0;
 	while (i < 26)
@@ -128,6 +127,5 @@ char	**make2darray(char *buff, int *count)
 		i++;
 	}
 	*count = j;
-	//printf("count=%d && j=%d\n", *count, j);
 	return (newarray);
 }

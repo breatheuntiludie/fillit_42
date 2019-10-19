@@ -6,7 +6,7 @@
 /*   By: ggeri <ggeri@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/15 13:52:51 by xlongfel          #+#    #+#             */
-/*   Updated: 2019/10/19 16:43:14 by ggeri            ###   ########.fr       */
+/*   Updated: 2019/10/19 21:24:03 by ggeri            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,6 @@
 # include <fcntl.h>
 
 # include "libft/libft.h"
-//checking
-# include <stdio.h>
 
 int		checktetris(char *block);
 int		checkmap(char *block);

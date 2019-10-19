@@ -6,12 +6,12 @@
 /*   By: ggeri <ggeri@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/15 12:42:17 by xlongfel          #+#    #+#             */
-/*   Updated: 2019/10/19 21:03:54 by ggeri            ###   ########.fr       */
+/*   Updated: 2019/10/19 22:02:36 by ggeri            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fillit.h"
-
+#include <stdio.h>
 int		main(int argc, char **argv)
 {
 	int		fd;
@@ -33,11 +33,10 @@ int		main(int argc, char **argv)
 		if (is_input_valid(buff))
 		{
 			mapsolution = make2darray(buff, &count);
-			//
-			//int loc=0;
-			//while(mapsolution[loc])
-				//printf("INCOMING:\n%s\n", mapsolution[loc++]);
-			//printf("check05:count=%d\n", count);
+			int c = 0;
+			int p = 0;
+			while (mapsolution[c])
+				printf("figure %d:\n%s\n", p++, mapsolution[c++]);
 			solve(mapsolution, count);
 		}
 		else
@@ -45,6 +44,13 @@ int		main(int argc, char **argv)
 	}
 	else
 		ft_putstr("error\n");
-	//free mapsolution
+	int k;
+	k = 0;
+	while (k < 26)
+	{
+		printf("cleaned %d\n", k);
+		free(mapsolution[k++]);
+	}
+	free(mapsolution);
 	return (0);
 }

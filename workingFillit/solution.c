@@ -6,7 +6,7 @@
 /*   By: ggeri <ggeri@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/15 13:18:03 by xlongfel          #+#    #+#             */
-/*   Updated: 2019/10/19 20:23:15 by ggeri            ###   ########.fr       */
+/*   Updated: 2019/10/19 21:23:53 by ggeri            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,19 +89,16 @@ int		trymap(char **shapes, char **map, int shapeindex, int shapecount)
 	int		mapcoor;
 	int		mapsize;
 
-//	printf("check07: trymap\n");
 	mapsize = ft_strlen(map[0]);
 	mapcoor = 0;
 	while (mapcoor < mapsize * mapsize)
 	{
-		//printf("check07:mapcoor=%d ", mapcoor);
 		if (tryshape(shapes[shapeindex], map, mapcoor) == 1)
 		{
 			if (shapeindex == shapecount - 1 ||
 					trymap(shapes, map, shapeindex + 1, shapecount))
 				return (1);
 			rmshape(map, shapeindex, mapsize);
-			//printf("__check07:rmshape->success__\n");
 		}
 		mapcoor++;
 	}
@@ -114,18 +111,12 @@ void	solve(char **shapes, int shapecount)
 	int		mapsize;
 	int		i;
 
-	int k;//delete
-	//printf("check06: solve\n");
 	mapsize = 1;
 	while (mapsize * mapsize < shapecount * 4)
 		mapsize++;
 	while (1)
 	{
 		map = emptymap(mapsize);
-		//printf("\ncheck06:solve:mapsize=%d\nemptymap:\n", mapsize);
-		//k = 0;//delete
-		//while(map[k])
-			//printf("%s\n",map[k++]);
 		if (trymap(shapes, map, 0, shapecount))
 			break ;
 		i = 0;
@@ -138,5 +129,4 @@ void	solve(char **shapes, int shapecount)
 	i = 0;
 	while (map[i])
 		ft_putendl(map[i++]);
-//	printf("check06: end of solving\n");
 }
