@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: xlongfel <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: ggeri <ggeri@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/15 12:42:17 by xlongfel          #+#    #+#             */
-/*   Updated: 2019/10/18 20:23:58 by xlongfel         ###   ########.fr       */
+/*   Updated: 2019/10/19 14:22:33 by ggeri            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -130,7 +130,7 @@ int		main(int argc, char **argv)
 
 	if (argc != 2)
 	{
-		write(1, "usage: source_file", 18);
+		write(1, "usage: source_file\n", 19);
 		return (0);
 	}
 	buff = ft_strnew(1024);
@@ -144,9 +144,9 @@ int		main(int argc, char **argv)
 			solve(mapsolution, count);
 		}
 		else
-			ft_putstr("error");
+			ft_putstr("error\n");
 	}
 	else
-		ft_putstr("error");
+		ft_putstr("error\n");
 	return (0);
 }
