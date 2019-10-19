@@ -18,6 +18,7 @@ What we need:
 	3. Delete all printf's and <stdio.h>
 	4. Check recompiling in Makefeile
 	5. Check incoming text, \n in the end
+	6. Check valgrind!!! Add cleaning functions!!
 
 How to use it:
 	Just run the whole program with command ./work (it will execute bash file)
