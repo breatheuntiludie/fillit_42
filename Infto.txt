@@ -12,16 +12,5 @@ Changes of Margo (xlongfel) source files:
 	5. Reworked function "make2darray" in array.c
 	6. Added '\n' in main.c
 
-What we need:
-	1. Check norminette
-	2. May be optimize make2darray (norminette is crying).
-	3. Make static functions.
-	4. Check recompiling in Makefeile.
-	5. Check incoming text, \n in the end.
-	6. Check valgrind!!! Add cleaning functions!! I can't find this leaks.
-	7. We loose one figure(((
-		7.1. Try to fix algorithm or add one useless sample in file (kostil').
-	8. There should be error with space after last line in sample(one more
-	empty line).
 How to use it:
 	Just run the whole program with command ./work (it will execute bash file).
