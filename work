@@ -1,0 +1,6 @@
+#!/bin/bash
+make re && ./fillit "sample.txt"
+sleep 10
+./fillit "sample1.txt"
+sleep 10
+valgrind --leak-check=full ./fillit
